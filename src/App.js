@@ -2,42 +2,45 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom'
 // import Layout from './components/Layout'
 // import LayoutMobile from './components/LayoutMobile'
-import { Desktop } from './components/desktop.component'
-import { Mobile } from './components/mobile.component'
-import { useMediaQuery } from 'react-responsive'
+// import { Desktop } from './components/desktop.component'
+// import { Mobile } from './components/mobile.component'
+// import { useMediaQuery } from 'react-responsive'
 import React, { useState, useEffect } from 'react'
+
+// import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Desktop//Layout'
+import Home from './components/Desktop/pages/Home'
+import About from './components/Desktop/pages/About'
+import Contact from './components/Desktop/pages/Contact'
+import Blog from './components/Desktop/pages/Blog/'
+import Write from './components/Desktop/pages/Write'
+import Settings from './components/Desktop/pages/Setting'
+import Login from './components/Desktop/pages/Login'
+import Single from './components/Desktop/pages/Single'
+import Register from './components/Desktop/pages/Register'
+
 
 function App() {
 
-  // const [width, setWindowWidth] = useState(0);
+  const currentUser = false;
+    return (
 
-  // useEffect(() => {
+        <Routes>
+            <Route path='/' element={<Layout />}>
+                <Route index element={<Home />} />      {/* default route */}
+                <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="blog" element={<Blog />} />
+                <Route path="post" element={<Blog />} />
+                <Route path="post/:id" element={<Single />} />
+                <Route path="blog-login" element={currentUser ? <Blog /> : <Login />} />
+                <Route path="blog-write" element={currentUser ? <Write /> : <Login />} />
+                <Route path="blog-settings" element={currentUser ? <Settings /> : <Login />} />
+                <Route path="blog-register" element={currentUser ? <Blog /> : <Register />} />
+            </Route>
+        </Routes>
 
-  //   updateDimensions();
-
-  //   window.addEventListener('resize', updateDimensions);
-  //   return () =>
-  //     window.removeEventListener('resize', updateDimensions);
-  // }, [])
-
-  // const updateDimensions = () => {
-  //   const width = window.innerWidth
-  //   setWindowWidth(width)
-  // }
-
-  
-  // const responsive = {
-  //   isDesktop: width > 780
-  // }
-  // // console.log(responsive.isDesktop);
-  
-  // if(responsive.isDesktop){
-  //   return <Desktop />;
-  // }else{
-  //   return <Mobile />;
-  // }
-
-  return <Desktop />;
+    );
   
 }
 
