@@ -1,0 +1,247 @@
+.navBar-bigScreen {
+    background: #181818;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+
+    .top {
+        flex: 2;
+        width: 100%;
+        max-height: 80px;
+        background-color: none;
+        margin-top: 50px;
+        // position: absolute;
+        opacity: 1;
+        // top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+
+        color: white;
+
+        .toplink {
+            display: block;
+
+        }
+
+        .topImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+
+        .topSearchIcon {
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+    }
+
+    nav:has(a.bl.active) {
+        a.bl {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 1000;
+            letter-spacing: 0.5px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex: 9;
+        text-align: center;
+        justify-content: center;
+        // position: relative;
+        // height: 210px;
+        // top: 35%;
+        margin-top: -200px;
+        width: 100%;
+
+        a {
+            font-size: 22px;
+            color: #4d4d4e;
+            display: block;
+            line-height: 51px;
+            height: 51px;
+            position: relative;
+            text-decoration: none;
+
+            i {
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+                color: #CADF9E;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 1000;
+                font-size: 11px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &::after {
+                    content: 'HOME';
+                }
+            }
+
+            // &:last-child {
+            //     &::after {
+            //         content: 'BLOG';
+            //     }
+            // }
+        }
+
+
+
+        a.about-link {
+            &::after {
+                content: 'ABOUT';
+            }
+        }
+
+        a.contact-link {
+            &::after {
+                content: 'CONTACT';
+            }
+        }
+
+        a.blog-link {
+            &::after {
+                content: 'BLOG';
+            }
+        }
+
+        a.active {
+            svg {
+                color: #CADF9E;
+            }
+
+            color: #CADF9E;
+        }
+
+        a.blog-login-link,
+        a.blog-register-link,
+        a.blog-settings-link,
+        a.blog-single-link,
+        a.blog-write-link {
+            display: none;
+        }
+
+        a.blog-link.active~a.blog-login-link,
+        a.blog-link.active~a.blog-register-link,
+        a.blog-link.active~a.blog-settings-link,
+        a.blog-link.active~a.blog-single-link,
+        a.blog-link.active~a.blog-write-link // nav a.blog-login-link.active~a.blog-link,
+        // nav a.blog-login-link.active~a.blog-login-link,
+        // nav a.blog-login-link.active~a.blog-register-link,
+        // nav a.blog-login-link.active~a.blog-settings-link,
+        // nav a.blog-login-link.active~a.blog-single-link,
+        // nav a.blog-login-link.active~a.blog-write-link,
+
+        // nav a.blog-register-link.active~a.blog-login-link,
+        // nav a.blog-register-link.active~a.blog-register-link,
+        // nav a.blog-register-link.active~a.blog-link,
+        // nav a.blog-register-link.active~a.blog-settings-link,
+        // nav a.blog-register-link.active~a.blog-single-link,
+        // nav a.blog-register-link.active~a.blog-write-link,
+
+        // nav a.blog-settings-link.active~a.blog-login-link,
+        // nav a.blog-settings-link.active~a.blog-settings-link,
+        // nav a.blog-settings-link.active~a.blog-register-link,
+        // nav a.blog-settings-link.active~a.blog-link,
+        // nav a.blog-settings-link.active~a.blog-single-link,
+        // nav a.blog-settings-link.active~a.blog-write-link,
+
+        // nav a.blog-single-link.active~a.blog-login-link,
+        // nav a.blog-single-link.active~a.blog-single-link,
+        // nav a.blog-single-link.active~a.blog-register-link,
+        // nav a.blog-single-link.active~a.blog-settings-link,
+        // nav a.blog-single-link.active~a.blog-link,
+        // nav a.blog-single-link.active~a.blog-write-link,
+
+        // nav a.blog-write-link.active~a.blog-login-link,
+        // nav a.blog-write-link.active~a.a.blog-write-link,
+        // nav a.blog-write-link.active~a.blog-register-link,
+        // nav a.blog-write-link.active~a.blog-settings-link,
+        // nav a.blog-write-link.active~a.blog-single-link,
+        // nav a.blog-write-link.active~a.blog-link{
+            {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 1000;
+            letter-spacing: 0.5px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+
+
+
+    }
+
+    ul {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li {
+            a {
+                padding: 7px 0;
+                display: block;
+                font-size: 15px;
+                line-height: 16px;
+
+                &:hover svg {
+                    color: #CADF9E;
+                }
+            }
+        }
+    }
+}

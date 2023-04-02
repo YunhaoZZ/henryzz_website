@@ -1,0 +1,62 @@
+.pic-container{
+    z-index: 0;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    opacity: 1;
+
+    svg {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        // transform: rotateZ(15deg);
+    }
+
+    .solid-pic {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        opacity: 1;
+        // transform: rotateZ(15deg);
+        z-index: 1;
+        animation: fadeIn 3s 1s backwards;
+
+        
+    }
+
+    &::before {
+        content: "<img src=";
+        font-family: 'La Belle Aurore';
+        color: #CADF9E;
+        font-size: 24px;
+        position: absolute;
+        margin-top: -40px;
+        left: 15px;
+        opacity: 0.6;
+    }
+
+    &::after {
+        content: "  />";
+        font-family: 'La Belle Aurore';
+        color: #CADF9E;
+        font-size: 28px;
+        position: absolute;
+        margin-top: 560px;
+        right: 15px;
+        opacity: 0.6;
+    }
+}
+
+.svg-container {
+    stroke: #CADF9E;
+    strokeWidth: 10px;
+}
