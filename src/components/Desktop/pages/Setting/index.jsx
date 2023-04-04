@@ -1,6 +1,6 @@
 import "./index.scss";
 // import Sidebar from "../../components/SideBar";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
@@ -15,6 +15,12 @@ export default function Settings() {
   const PF = "http://localhost:5000/images/"
 
   axios.defaults.baseURL = "http://localhost:5000/api/"
+
+  useEffect(() => {
+    setUsername(user.username)
+    setEmail(user.email)
+  }, );
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
