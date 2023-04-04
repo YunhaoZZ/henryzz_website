@@ -163,7 +163,8 @@
         a.blog-register-link,
         a.blog-settings-link,
         a.blog-single-link,
-        a.blog-write-link {
+        a.blog-write-link,
+        a.blog-logout-link {
             display: none;
         }
 
@@ -171,40 +172,8 @@
         a.blog-link.active~a.blog-register-link,
         a.blog-link.active~a.blog-settings-link,
         a.blog-link.active~a.blog-single-link,
-        a.blog-link.active~a.blog-write-link // nav a.blog-login-link.active~a.blog-link,
-        // nav a.blog-login-link.active~a.blog-login-link,
-        // nav a.blog-login-link.active~a.blog-register-link,
-        // nav a.blog-login-link.active~a.blog-settings-link,
-        // nav a.blog-login-link.active~a.blog-single-link,
-        // nav a.blog-login-link.active~a.blog-write-link,
-
-        // nav a.blog-register-link.active~a.blog-login-link,
-        // nav a.blog-register-link.active~a.blog-register-link,
-        // nav a.blog-register-link.active~a.blog-link,
-        // nav a.blog-register-link.active~a.blog-settings-link,
-        // nav a.blog-register-link.active~a.blog-single-link,
-        // nav a.blog-register-link.active~a.blog-write-link,
-
-        // nav a.blog-settings-link.active~a.blog-login-link,
-        // nav a.blog-settings-link.active~a.blog-settings-link,
-        // nav a.blog-settings-link.active~a.blog-register-link,
-        // nav a.blog-settings-link.active~a.blog-link,
-        // nav a.blog-settings-link.active~a.blog-single-link,
-        // nav a.blog-settings-link.active~a.blog-write-link,
-
-        // nav a.blog-single-link.active~a.blog-login-link,
-        // nav a.blog-single-link.active~a.blog-single-link,
-        // nav a.blog-single-link.active~a.blog-register-link,
-        // nav a.blog-single-link.active~a.blog-settings-link,
-        // nav a.blog-single-link.active~a.blog-link,
-        // nav a.blog-single-link.active~a.blog-write-link,
-
-        // nav a.blog-write-link.active~a.blog-login-link,
-        // nav a.blog-write-link.active~a.a.blog-write-link,
-        // nav a.blog-write-link.active~a.blog-register-link,
-        // nav a.blog-write-link.active~a.blog-settings-link,
-        // nav a.blog-write-link.active~a.blog-single-link,
-        // nav a.blog-write-link.active~a.blog-link{
+        a.blog-link.active~a.blog-write-link,
+        a.blog-link.active~a.blog-logout-link 
             {
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
@@ -216,6 +185,8 @@
             opacity: 1;
             transition: all 0.3s ease-out;
         }
+
+        
 
 
 

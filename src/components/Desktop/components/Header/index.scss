@@ -12,13 +12,13 @@
 
 .headerTitleSm {
   position: absolute;
-  top: 5%;
+  top: 10%;
   font-size: 20px;
 }
 
 .headerTitleLg {
   position: absolute;
-  top: 7%;
+  top: 12%;
   font-size: 100px;
 }
 
@@ -28,4 +28,6 @@
   margin-top: 60px;
   object-fit: cover;
   object-position: -100px -600px;
+
+  min-width: 1680px;
 }

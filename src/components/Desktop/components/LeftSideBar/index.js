@@ -4,23 +4,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope, faBlog } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 // import { useEffect, useState } from 'react'
-import Pic from '../../../../assets/images/profilepic.jpg'
+// import Pic from '../../../../assets/images/profilepic.jpg'
 import { Link } from "react-router-dom";
+import { useContext } from 'react'
+import { Context } from '../../context/Context'
+import Pic from '../../../../assets/images/Default_pfp.svg.png'
+
 
 
 const LeftSideBar = () => {
-    const user = false;
+    const { user, dispatch } = useContext(Context);
+    const PF = "http://localhost:5000/images/"
+
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+      };
+
+    // console.log(user.profilePic=="")
+    // console.log(typeof(user.profilePic))
 
     return (
         <div className='navBar-bigScreen'>
             <div className="top">
                 {user ? (
                     <Link className="link-profpic toplink" to="/blog-settings">
-                        <img
+                        {user.profilePic == ""? (<img
                             className="topImg"
-                            src={Pic}
+                            // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
+                            // src = {PF+user.profilePic}
+                            src = {Pic}
                             alt=""
-                        />
+                        />):
+                        (<img
+                            className="topImg"
+                            // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
+                            src = {PF+user.profilePic}
+                            // src = {Pic}
+                            alt=""
+                        />)}
                     </Link>
                 ) : (
                     <></>
@@ -40,22 +61,28 @@ const LeftSideBar = () => {
                 <NavLink exact="true" activeclassname="active" className="blog-link" to="/blog">
                     <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
                 </NavLink>
+                <NavLink exact="true" activeclassname="active" className="bl blog-write-link" to="/blog-write">
+                    Write
+                </NavLink>
                 {!user ? (<><NavLink exact="true" activeclassname="active" className="bl blog-login-link" to="/blog-login">
                     Login
                 </NavLink>
                     <NavLink exact="true" activeclassname="active" className="bl blog-register-link" to="/blog-register">
                         Register
                     </NavLink></>) : (<>
-                        <NavLink exact="true" activeclassname="active" className="bl blog-settings-link" to="/blog-settings">
+                        {/* <NavLink exact="true" activeclassname="active" className="bl blog-settings-link" to="/blog-settings">
                             Setting
-                        </NavLink>
+                        </NavLink> */}
                         {/* <NavLink exact="true" activeclassname="active" className=" blog-single-link" to="/blog-single">
                             Single
                         </NavLink> */}
-                        <NavLink exact="true" activeclassname="active" className="bl blog-write-link" to="/blog-write">
-                            Write
-                        </NavLink>
+
                     </>)}
+                
+                {user && <NavLink onClick={handleLogout} className="bl blog-logout-link" to="/blog-login">
+                    Log out
+                </NavLink>}
+
 
             </nav>
             <ul>

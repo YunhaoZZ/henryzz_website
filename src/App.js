@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 // import { Desktop } from './components/desktop.component'
 // import { Mobile } from './components/mobile.component'
 // import { useMediaQuery } from 'react-responsive'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 // import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Desktop//Layout'
@@ -18,11 +18,13 @@ import Settings from './components/Desktop/pages/Setting'
 import Login from './components/Desktop/pages/Login'
 import Single from './components/Desktop/pages/Single'
 import Register from './components/Desktop/pages/Register'
+import { Context } from './components/Desktop/context/Context';
+
 
 
 function App() {
 
-  const currentUser = false;
+  const {user} = useContext(Context);
     return (
 
         <Routes>
@@ -33,10 +35,10 @@ function App() {
                 <Route path="blog" element={<Blog />} />
                 <Route path="post" element={<Blog />} />
                 <Route path="post/:id" element={<Single />} />
-                <Route path="blog-login" element={currentUser ? <Blog /> : <Login />} />
-                <Route path="blog-write" element={currentUser ? <Write /> : <Login />} />
-                <Route path="blog-settings" element={currentUser ? <Settings /> : <Login />} />
-                <Route path="blog-register" element={currentUser ? <Blog /> : <Register />} />
+                <Route path="blog-login" element={user ? <Blog /> : <Login />} />
+                <Route path="blog-write" element={user ? <Write /> : <Login />} />
+                <Route path="blog-settings" element={user ? <Settings /> : <Login />} />
+                <Route path="blog-register" element={user ? <Blog /> : <Register />} />
             </Route>
         </Routes>
 
