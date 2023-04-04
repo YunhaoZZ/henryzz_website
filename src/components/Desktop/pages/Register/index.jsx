@@ -2,6 +2,12 @@ import { Link } from "react-router-dom"
 import "./index.scss"
 import { useState } from "react";
 import axios from "axios";
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
+
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -9,7 +15,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+  // axios.defaults.baseURL = "http://localhost:5000/api/"
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);

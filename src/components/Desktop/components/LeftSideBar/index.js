@@ -9,12 +9,14 @@ import { Link } from "react-router-dom";
 import { useContext } from 'react'
 import { Context } from '../../context/Context'
 import Pic from '../../../../assets/images/Default_pfp.svg.png'
+import '../../../../ipv4'
 
+const local = global.config.ipv4
 
 
 const LeftSideBar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images/"
+    const PF = "http://" + local + ":5000/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });

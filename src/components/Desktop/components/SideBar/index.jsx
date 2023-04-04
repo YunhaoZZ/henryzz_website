@@ -2,12 +2,17 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 export default function Sidebar() {
 
   const [cats, setCats] = useState([]);
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+  // axios.defaults.baseURL = "http://localhost:5000/api/"
 
   useEffect(() => {
     const getCats = async () => {

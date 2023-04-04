@@ -2,6 +2,11 @@ import "./index.scss";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 export default function Write() {
 
@@ -10,7 +15,8 @@ export default function Write() {
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+
+  // axios.defaults.baseURL = "http://" + {local} + ":5000/api/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

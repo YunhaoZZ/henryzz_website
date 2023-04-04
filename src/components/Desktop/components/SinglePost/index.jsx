@@ -3,19 +3,24 @@ import "./index.scss";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context"
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:5000/images/";
+  const PF = "http://" + local + ":5000/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+  // axios.defaults.baseURL = "http://localhost:5000/api/"
 
   useEffect(() => {
     const getPost = async () => {

@@ -3,6 +3,11 @@ import "./index.scss";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -12,9 +17,9 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
+  const PF = "http://" + local + ":5000/images/";
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+  // axios.defaults.baseURL = "http://localhost:5000/api/"
 
   useEffect(() => {
     setUsername(user.username)

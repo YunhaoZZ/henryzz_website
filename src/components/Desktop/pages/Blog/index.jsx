@@ -6,13 +6,17 @@ import Sidebar from '../../components/SideBar';
 import axios from "axios";
 import './index.scss';
 import { useEffect, useState } from 'react';
+import '../../../../ipv4'
 
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const { search } = useLocation();
 
-    axios.defaults.baseURL = "http://localhost:5000/api/"
+    // axios.defaults.baseURL = "http://localhost:5000/api/"
 
     useEffect(() => {
         const fetchPosts = async () => {

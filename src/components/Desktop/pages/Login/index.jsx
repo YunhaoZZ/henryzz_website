@@ -3,13 +3,18 @@ import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./index.scss";
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { user, dispatch, isFetching } = useContext(Context);
 
-  axios.defaults.baseURL = "http://localhost:5000/api/"
+  // axios.defaults.baseURL = "http://localhost:5000/api/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();

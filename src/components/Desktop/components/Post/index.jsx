@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import "./index.scss";
+import '../../../../ipv4'
+
+const local = global.config.ipv4
+
+// axios.defaults.baseURL = "http://" + local + ":5000/api/"
 
 export default function Post({ post }) {
-    const PF = "http://localhost:5000/images/";
+    const PF = "http://" + local + ":5000/images/";
     const PostCat = "/posts?cat=";
     return (
         <div className="post">
