@@ -10,8 +10,7 @@ import '../../../../ipv4'
 
 const local = global.config.ipv4
 
-axios.defaults.baseURL = "http://" + local + ":5000/api/"
-
+axios.defaults.baseURL = local + "/api/"
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const { search } = useLocation();

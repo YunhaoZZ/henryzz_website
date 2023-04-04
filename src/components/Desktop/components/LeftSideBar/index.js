@@ -16,7 +16,7 @@ const local = global.config.ipv4
 
 const LeftSideBar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://" + local + ":5000/images/";
+    const PF = local + "/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });

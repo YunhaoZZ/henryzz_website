@@ -7,8 +7,7 @@ import '../../../../ipv4'
 
 const local = global.config.ipv4
 
-axios.defaults.baseURL = "http://" + local + ":5000/api/"
-
+axios.defaults.baseURL = local + "/api/"
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();

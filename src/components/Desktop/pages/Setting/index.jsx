@@ -7,7 +7,7 @@ import '../../../../ipv4'
 
 const local = global.config.ipv4
 
-axios.defaults.baseURL = "http://" + local + ":5000/api/"
+axios.defaults.baseURL = local + "/api/"
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -17,7 +17,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://" + local + ":5000/images/";
+  const PF = local + "/images/";
 
   // axios.defaults.baseURL = "http://localhost:5000/api/"
 
