@@ -24,7 +24,7 @@ export default function Settings() {
   useEffect(() => {
     setUsername(user.username)
     setEmail(user.email)
-  }, );
+  }, [user.username, user.email]);
 
 
   const handleSubmit = async (e) => {

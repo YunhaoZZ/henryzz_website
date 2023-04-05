@@ -30,7 +30,7 @@ const LeftSideBar = () => {
             <div className="top">
                 {user ? (
                     <Link className="link-profpic toplink" to="/blog-settings">
-                        {user.profilePic == ""? (<img
+                        {user.profilePic === ""? (<img
                             className="topImg"
                             // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
                             // src = {PF+user.profilePic}

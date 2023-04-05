@@ -11,7 +11,7 @@ axios.defaults.baseURL = local + "/api/"
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
-  const { user, dispatch, isFetching } = useContext(Context);
+  const { dispatch, isFetching } = useContext(Context);
 
   // axios.defaults.baseURL = "http://localhost:5000/api/"
 

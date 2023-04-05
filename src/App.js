@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 // import { Desktop } from './components/desktop.component'
 // import { Mobile } from './components/mobile.component'
 // import { useMediaQuery } from 'react-responsive'
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 
 // import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Desktop//Layout'

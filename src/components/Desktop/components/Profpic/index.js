@@ -1,6 +1,6 @@
 import './index.scss'
 import Pic from '../../../../assets/images/profilepic.jpg'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 const Profpic = () => {
 

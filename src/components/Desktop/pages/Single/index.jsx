@@ -1,4 +1,4 @@
-import Sidebar from '../../components/SideBar'
+// import Sidebar from '../../components/SideBar'
 import SinglePost from '../../components/SinglePost'
 import "./index.scss"
 
