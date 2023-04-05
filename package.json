@@ -2,7 +2,7 @@
   "name": "henry_zz_portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://YunhaoZZ.github.io/henry_zz_portfolio",
+  "homepage": "http://YunhaoZZ.github.io/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
@@ -49,6 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:5000/api/"
+  }
 }
