@@ -32,13 +32,6 @@ function App() {
                 <Route index element={<Home />} />      {/* default route */}
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
-                <Route path="blog" element={<Blog />} />
-                <Route path="post" element={<Blog />} />
-                <Route path="post/:id" element={<Single />} />
-                <Route path="blog-login" element={user ? <Blog /> : <Login />} />
-                <Route path="blog-write" element={user ? <Write /> : <Login />} />
-                <Route path="blog-settings" element={user ? <Settings /> : <Login />} />
-                <Route path="blog-register" element={user ? <Blog /> : <Register />} />
             </Route>
         </Routes>
 

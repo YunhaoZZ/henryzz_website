@@ -60,30 +60,7 @@ const LeftSideBar = () => {
                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
-                <NavLink exact="true" activeclassname="active" className="blog-link" to="/blog">
-                    <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="bl blog-write-link" to="/blog-write">
-                    Write
-                </NavLink>
-                {!user ? (<><NavLink exact="true" activeclassname="active" className="bl blog-login-link" to="/blog-login">
-                    Login
-                </NavLink>
-                    <NavLink exact="true" activeclassname="active" className="bl blog-register-link" to="/blog-register">
-                        Register
-                    </NavLink></>) : (<>
-                        {/* <NavLink exact="true" activeclassname="active" className="bl blog-settings-link" to="/blog-settings">
-                            Setting
-                        </NavLink> */}
-                        {/* <NavLink exact="true" activeclassname="active" className=" blog-single-link" to="/blog-single">
-                            Single
-                        </NavLink> */}
-
-                    </>)}
                 
-                {user && <NavLink onClick={handleLogout} className="bl blog-logout-link" to="/blog-login">
-                    Log out
-                </NavLink>}
 
 
             </nav>
