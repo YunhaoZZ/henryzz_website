@@ -33,6 +33,8 @@ const Home = () => {
                     </h1>
                     <h2>Web developer</h2>
                     <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    
+                    <a href="https://drive.google.com/file/d/1eE1UXhR9gdrR4tmqpdhOumaU5BbjCMHg/view?usp=share_link" className='flat-button' id='resume-button' download>DOWNLOAD MY RESUME</a>
                 </div>
                 <Profpic />
             </div>
