@@ -1,4 +1,4 @@
-.navBar-bigScreen {
+.navBar {
     background: #181818;
     width: 100px;
     height: 100%;
@@ -16,9 +16,9 @@
         background-color: none;
         margin-top: 50px;
         // position: absolute;
-        opacity: 1;
+        background: transparent;
         // top: 0;
-        display: flex;
+        display: trans;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -75,7 +75,7 @@
         // position: relative;
         // height: 210px;
         // top: 35%;
-        margin-top: -200px;
+        margin-top: 0px;
         width: 100%;
 
         a {
@@ -173,8 +173,7 @@
         a.blog-link.active~a.blog-settings-link,
         a.blog-link.active~a.blog-single-link,
         a.blog-link.active~a.blog-write-link,
-        a.blog-link.active~a.blog-logout-link 
-            {
+        a.blog-link.active~a.blog-logout-link {
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 1000;
@@ -186,7 +185,7 @@
             transition: all 0.3s ease-out;
         }
 
-        
+
 
 
 
@@ -213,6 +212,71 @@
                     color: #CADF9E;
                 }
             }
+
+            &:hover {
+                .anchor-icon {
+                    color: #CADF9E;
+                }
+            }
+        }
+    }
+}
+
+.hamburger-icon,
+.close-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .navBar {
+        background: transparent;
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        ul,
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #181818;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
+
+            &.mobile-show {
+                display: block;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10PX;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+        }
+
+        .hamburger-icon,
+        .close-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: block;
         }
     }
 }

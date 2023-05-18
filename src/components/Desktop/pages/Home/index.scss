@@ -69,7 +69,40 @@
         }
     }
 
-    #resume-button{
+    #resume-button {
         margin-left: 20px;
     }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .home-page {
+        .text-zone {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            max-height: 90%;
+        }
+
+        h1{
+            font-weight: 300;
+            font-size: 30px;
+        }
+
+        #resume-button,
+        .flat-button {
+            clear:both;
+            margin-left: 0px;
+            display: block;
+        }
+
+        .profilepic {
+            display: none;
+        }
+    }
+
+
+
 }

@@ -1,12 +1,12 @@
 import './index.scss'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faBlog } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faBlog, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 // import { useEffect, useState } from 'react'
 // import Pic from '../../../../assets/images/profilepic.jpg'
 import { Link } from "react-router-dom";
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Context } from '../../context/Context'
 import Pic from '../../../../assets/images/Default_pfp.svg.png'
 import '../../../../ipv4'
@@ -20,62 +20,76 @@ const LeftSideBar = () => {
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
-      };
+    };
+
+    const [showNav, setShowNav] = useState(false);
 
     // console.log(user.profilePic=="")
     // console.log(typeof(user.profilePic))
 
     return (
-        <div className='navBar-bigScreen'>
+        <div className='navBar'>
             <div className="top">
-                {user ? (
+                {/* {user ? (
                     <Link className="link-profpic toplink" to="/blog-settings">
-                        {user.profilePic === ""? (<img
+                        {user.profilePic === "" ? (<img
                             className="topImg"
                             // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
                             // src = {PF+user.profilePic}
-                            src = {Pic}
+                            src={Pic}
                             alt=""
-                        />):
-                        (<img
-                            className="topImg"
-                            // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
-                            src = {PF+user.profilePic}
-                            // src = {Pic}
-                            alt=""
-                        />)}
+                        />) :
+                            (<img
+                                className="topImg"
+                                // src={user.profilePic != ""? (PF+user.profilePic) : {Pic}}
+                                src={PF + user.profilePic}
+                                // src = {Pic}
+                                alt=""
+                            />)}
                     </Link>
                 ) : (
                     <></>
                 )}
-                <i className="topSearchIcon fas fa-search toplink"></i>
+                <i className="topSearchIcon fas fa-search toplink"></i> */}
             </div>
-            <nav>
-                <NavLink exact="true" activeclassname="active" to="/">
+            <nav className={showNav ? 'mobile-show' : ''}>
+                <NavLink exact="true" activeclassname="active" to="/" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
-                <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+                <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
                 </NavLink>
-                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
-                
+                <FontAwesomeIcon
+                    onClick={() => setShowNav(false)}
+                    icon={faClose}
+                    color="#CADF9E"
+                    size="3x"
+                    className='close-icon' />
+
 
 
             </nav>
             <ul>
                 <li>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yunhao-zhang-henry/">
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className="anchor-icon"/>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" rel="noreferrer" href="https://github.com/YunhaoZZ">
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e" className="anchor-icon"/>
                     </a>
                 </li>
             </ul>
+            <FontAwesomeIcon
+                onClick={() => setShowNav(true)}
+                icon={faBars}
+                color="#CADF9E"
+                size="3x"
+                className='hamburger-icon' />
         </div>
 
 

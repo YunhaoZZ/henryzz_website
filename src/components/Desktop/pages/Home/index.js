@@ -36,7 +36,8 @@ const Home = () => {
                     
                     <a href="https://drive.google.com/file/d/1eE1UXhR9gdrR4tmqpdhOumaU5BbjCMHg/view?usp=share_link" className='flat-button' id='resume-button' download>DOWNLOAD MY RESUME</a>
                 </div>
-                <Profpic />
+                <span className='profilepic'><Profpic /></span>
+                
             </div>
             <Loader type="square-spin" />
         </>

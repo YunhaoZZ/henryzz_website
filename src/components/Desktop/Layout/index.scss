@@ -125,3 +125,28 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) { 
+
+
+    .tags {
+        color: #CADF9E;
+        opacity: 0.2;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        font-size: 18px;
+        font-family: 'La Belle Aurore';
+        margin-left: 20px;
+        // margin-top: -50px;
+    }
+
+    .top-tags {
+        bottom: auto;
+        top: 0px;
+    }
+
+    .btm-tags {
+        bottom: 70px;
+    }
+}
