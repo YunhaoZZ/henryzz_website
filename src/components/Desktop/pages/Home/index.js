@@ -9,7 +9,7 @@ const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
 
     const nameArray = [' ', 'H', 'e', 'n', 'r', 'y', ' ', 'Z', 'h', 'a', 'n', 'g'];
-    const jobArray = [' ', 'E', 'n', 'g', 'i', 'n', 'e', 'e', 'r'];
+    const jobArray = ['E', 'n', 'g', 'i', 'n', 'e', 'e', 'r'];
 
     setTimeout(() => {
         setLetterClass('text-animate-hover')
@@ -25,8 +25,10 @@ const Home = () => {
                             strArray={nameArray}
                             idx={15} />
                         <br />
-                        Software Development
+                        Software Development 
+                        <br/>
                         <AnimatedLetters
+                            className = 'Engineer'
                             letterClass={letterClass}
                             strArray={jobArray}
                             idx={22} />

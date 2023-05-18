@@ -72,11 +72,19 @@
     #resume-button {
         margin-left: 20px;
     }
+
+    .mobile-break {
+        display: none;
+    }
     
 }
 
 @media screen and (max-width: 1100px) {
     .home-page {
+        .mobile-break {
+            display:block;
+        }
+
         .text-zone {
             position: absolute;
             left: 10%;
