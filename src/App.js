@@ -19,6 +19,7 @@ import Login from './components/Desktop/pages/Login'
 import Single from './components/Desktop/pages/Single'
 import Register from './components/Desktop/pages/Register'
 import { Context } from './components/Desktop/context/Context';
+import Projects from './components/Desktop/pages/Projects';
 
 
 
@@ -32,6 +33,7 @@ function App() {
                 <Route index element={<Home />} />      {/* default route */}
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="projects" element={<Projects />} />
             </Route>
         </Routes>
 

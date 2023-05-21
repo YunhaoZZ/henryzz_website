@@ -1,8 +1,8 @@
 import './index.scss'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faBlog, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faHome, faUser, faEnvelope, faBlog, faBars, faClose, faProjectDiagram, faP, faProcedures, faList, faToolbox, faTools } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
 // import { useEffect, useState } from 'react'
 // import Pic from '../../../../assets/images/profilepic.jpg'
 import { Link } from "react-router-dom";
@@ -61,6 +61,9 @@ const LeftSideBar = () => {
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects" onClick={() => setShowNav(false)}>
+                    <FontAwesomeIcon icon={faTools} color="#4d4d4e" />
                 </NavLink>
                 <FontAwesomeIcon
                     onClick={() => setShowNav(false)}

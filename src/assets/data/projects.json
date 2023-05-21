@@ -1,0 +1,10 @@
+{
+    "projects": [
+        {
+            "cover": "/projects/website.png",
+            "title": "Personal Website",
+            "description": "React, JSX, Tailwind, Jest",
+            "url": "http://henryzz.com"
+        }
+    ]
+}
