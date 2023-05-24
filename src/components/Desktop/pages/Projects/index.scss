@@ -11,7 +11,8 @@
     // position: initial;
     min-height: 0px;
     height: 85%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     h1.page-title {
         margin-left: 8%;
