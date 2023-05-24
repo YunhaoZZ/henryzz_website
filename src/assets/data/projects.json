@@ -1,10 +1,24 @@
 {
     "projects": [
         {
-            "cover": "/projects/website.png",
+            "cover": "/projects/one/website1.png",
             "title": "Personal Website",
-            "description": "React, JSX, Tailwind, Jest",
+            "description": "React, JSX, Sass",
             "url": "http://henryzz.com"
+        },
+
+        {
+            "cover": "/projects/one/vrkitchen.jpg",
+            "title": "VR Kitchen",
+            "description": "Unity 3D, C#, Android VR",
+            "url": "https://drive.google.com/file/d/1_kNtOlMkldHFbyRyjbi-DCw3HSsd7bh1/view?usp=sharing"
+        },
+
+        {
+            "cover": "/projects/one/14ALLboard.png",
+            "title": "Puzzle Board Game",
+            "description": "Unity 3D, C#",
+            "url": "https://p13-l0v3r.itch.io/14ll"
         }
     ]
 }
