@@ -2,6 +2,7 @@
     position: absolute;
     padding-left: 30px;
     padding-right: 50px;
+    padding-top: 20px;
     // border: white solid 1pt;
 
     top: 50px;
@@ -11,8 +12,7 @@
     // position: initial;
     min-height: 0px;
     height: 85%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: auto;
 
     h1.page-title {
         margin-left: 8%;
@@ -152,8 +152,11 @@
 
         // border: white 1pt solid;
         min-height: 0px;
-        height: 75%;
-        padding: 0 20px;
+        height: 72%;
+        padding: 0 15px 0 10px;
+        width: 100%;
+        left: 0px;
+
 
 
         h1.page-title {
@@ -162,11 +165,14 @@
         }
 
         .images-container {
-            display: flex;
+            margin: 0 auto;
+            display: block;
+            align-items: center;
             gap: 15px;
-            flex-wrap: wrap;
+            width: 80%;
             padding-left: 0;
             padding-bottom: 100px;
+            // border: white 1pt solid;
         }
 
         .image-box {
@@ -177,8 +183,9 @@
             border-radius: 10px;
             width: 100%;
             max-width: 500px;
-            min-width: 300px;
+            min-width: 0;
             flex-wrap: wrap;
+            margin-bottom: 18px;
             // border: white solid 1pt;
         }
 
