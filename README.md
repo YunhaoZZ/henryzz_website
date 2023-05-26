@@ -1,6 +1,7 @@
 # Welcome to My Portfolio + Blog
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check the website here: [henryzz.com](https://henryzz.com).
 
 ## Prerequsite
 
