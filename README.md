@@ -20,10 +20,9 @@ After node is installed, now run the following cmds in order to see my portfolio
 
 `npm start` boots the react app to your default browswer, or you can manually go to the link to `localhost:port` (usually `localhost:3000/`).
 
-## Questions
+<!-- ## Questions
 
-+ Usually the blog version will work as fine, but if there's anything wrong please inform me through github or any contact method. It would probably be malfunction of api connection with AWS EC2 or Mongoose.
 
-+ I will keep updating the features like commenting, liking, so one. It was a fun experience developing the blog!
 
 + I'm open to work opportunities as Software Engineer Developer. I'm good with any direction, Full-stack, Front-end, Back-end, even Machine Learning! Contact me for more information!
+ -->
