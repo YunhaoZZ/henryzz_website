@@ -65,6 +65,9 @@ const LeftSideBar = () => {
                 <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faTools} color="#4d4d4e" />
                 </NavLink>
+                <NavLink exact="true" activeclassname="active" className="posts-link" to="/posts" onClick={() => setShowNav(false)}>
+                    <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
+                </NavLink>
                 <FontAwesomeIcon
                     onClick={() => setShowNav(false)}
                     icon={faClose}

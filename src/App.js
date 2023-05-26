@@ -20,6 +20,8 @@ import Single from './components/Desktop/pages/Single'
 import Register from './components/Desktop/pages/Register'
 import { Context } from './components/Desktop/context/Context';
 import Projects from './components/Desktop/pages/Projects';
+import Posts from './components/Desktop/pages/Posts';
+// require('dotenv').config()
 
 
 
@@ -34,6 +36,7 @@ function App() {
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="projects" element={<Projects />} />
+                <Route path="posts" element={<Posts />} />
             </Route>
         </Routes>
 

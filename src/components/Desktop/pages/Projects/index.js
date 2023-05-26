@@ -6,7 +6,7 @@ import projectsData from '../../../../assets/data/projects.json'
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
-    const [projects, setProjects] = useState([]);
+    // const [projects, setProjects] = useState([]);
     console.log(projectsData)
 
     useEffect(() => {

@@ -157,6 +157,12 @@
             }
         }
 
+        a.posts-link {
+            &::after {
+                content: 'POSTS';
+            }
+        }
+
         a.active {
             svg {
                 color: #CADF9E;
