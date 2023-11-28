@@ -101,7 +101,7 @@ const Posts = () => {
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={"Posts from".split("")}
+                        strArray={"Posts".split("")}
                         idx={15}
                     />
                 </h1>

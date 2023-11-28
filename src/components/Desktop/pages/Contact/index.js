@@ -85,10 +85,10 @@ const Contact = () => {
                 </div>
                 <div className="info-map">
                     Henry Zhang <br />
-                    2700 Waterview Pkwy, <br />
-                    Richardson,
+                    18749 Marsh Ln,  <br />
+                    Dallas, 
                     <br />
-                    Texas, 75080
+                    Texas, 75287
                     <br />
 
                     <br />
@@ -96,9 +96,9 @@ const Contact = () => {
                 </div>
                 <div className="map-wrap">
                     
-                    <MapContainer center={[32.98779125014476, -96.75398810531627]} zoom={13}>
+                    <MapContainer center={[33.00872764043363, -96.85870449925301]} zoom={13}>
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={[32.98779125014476, -96.75398810531627]}>
+                        <Marker position={[33.00872764043363, -96.85870449925301]}>
                             <Popup>Henry lives here, come over for a can of Dr. Pepper :)</Popup>
                         </Marker>
                     </MapContainer>
