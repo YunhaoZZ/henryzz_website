@@ -18,7 +18,7 @@ const Contact = () => {
         e.preventDefault()
 
         emailjs
-            .sendForm('service_22pexeb', 'template_bwd2yzi', form.current, '4S5NVUcrRYK8X7-5F')
+            .sendForm('service_22pexeb', 'template_bwd2yzi', form.current, '0gOb9EVORNmT1Aclw')
             .then(
                 () => {
                     alert('Message successfully sent!')
@@ -42,10 +42,7 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        I am interested in opportunities as software engineer intern or full time job - directions
-                        like front-end, back-end, full stack, database, machine learning, etc. However, if you have any other
-                        job opportunities or
-                        questions, don't hesitate to contact me using below form either.
+                        Contact me for anything interesting!
                     </p>
                     <div className="contact-form">
                         <form ref={form} onSubmit={sendEmail}>
@@ -84,11 +81,9 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="info-map">
-                    Henry Zhang <br />
-                    18749 Marsh Ln,  <br />
-                    Dallas, 
-                    <br />
-                    Texas, 75287
+                    Henry Zhang <br /><br />
+                    North Dallas  <br />
+                    Texas &#129312;
                     <br />
 
                     <br />

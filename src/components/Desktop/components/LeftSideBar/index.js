@@ -2,7 +2,7 @@ import './index.scss'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope, faBlog, faBars, faClose, faProjectDiagram, faP, faProcedures, faList, faToolbox, faTools } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faInstagram, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
 // import { useEffect, useState } from 'react'
 // import Pic from '../../../../assets/images/profilepic.jpg'
 import { Link } from "react-router-dom";
@@ -62,9 +62,9 @@ const LeftSideBar = () => {
                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
-                <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects" onClick={() => setShowNav(false)}>
+                {/* <NavLink exact="true" activeclassname="active" className="projects-link" to="/projects" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faTools} color="#4d4d4e" />
-                </NavLink>
+                </NavLink> */}
                 <NavLink exact="true" activeclassname="active" className="posts-link" to="/posts" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faBlog} color="#4d4d4e" />
                 </NavLink>
@@ -79,6 +79,11 @@ const LeftSideBar = () => {
 
             </nav>
             <ul>
+                <li>
+                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/bchenryzzz">
+                        <FontAwesomeIcon icon={faInstagram} color="#4d4d4e" className="anchor-icon"/>
+                    </a>
+                </li>
                 <li>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yunhao-zhang-henry/">
                         <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className="anchor-icon"/>

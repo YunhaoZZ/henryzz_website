@@ -26,18 +26,15 @@ const About = () => {
                         />
                     </h1>
                     <p>
-                        I'm a Computer Science major graduate student at the University of Texas at Dallas looking for a
-                        role as a Software Engineer. I will graduate in December 2023.
+                    I'm a Software Engineer at <strong>Topaz Labs LLC</strong>, where I’ve been contributing to the development of high-performance desktop applications and handling enterprise-level feature requests since December 2023.
                     </p>
                     <p>
-                        I am excited to pursue a career in software engineering and am currently seeking employment opportunities in the field.
-                        I've been dedicated to improving myself in many aspects. During my time in the university, I gained experience in a wide range of programming languages.
+                    Previously, I graduated with a degree in Computer Science from the <strong>University of Texas at Dallas</strong>, where I built a solid foundation in programming and full-stack development. My academic background and personal projects have given me broad experience across web, mobile, and backend technologies.
                     </p>
                     <p>
-                        Some fields that I specialized in are Web Programming, both front-end and server-side, Database management, and Mobile app development.
-                    </p>
+                    I’m passionate about building impactful software that combines performance with a great user experience.                    </p>
                     <p>
-                        I am also a hip-hop dancer, guitar player, and photography enthusiast! &#127752;
+                    Outside of work, I’m a hip-hop dancer, judo practitioner, guitar player, and photography enthusiast &#127752; — creativity and discipline flow into both my code and my hobbies. 
                     </p>
                     {/* I'm a Computer Science major graduate student at the University of Texas at Dallas looking for a role as a Software Engineer. I will graduate in December 2023.
 I am excited to pursue a career in software engineering and am currently seeking employment opportunities in the field.
